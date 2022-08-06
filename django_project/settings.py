@@ -37,12 +37,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
     # Local
     "accounts.apps.AccountsConfig",
     "pages.apps.PagesConfig",
     # Third-party
     "crispy_forms",
     "crispy_bootstrap5",
+    "allauth",
+    "allauth.account",
 ]
 
 MIDDLEWARE = [
@@ -143,3 +146,6 @@ LOGOUT_REDIRECT_URL = "home"
 # django-crispy-forms
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# django-allauth config
+SITE_ID = 1
